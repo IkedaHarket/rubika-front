@@ -1,0 +1,13 @@
+<article class="product-card">
+    <h6>{{rubikProduct.product.name}}</h6>
+    <div class="picture">
+        <img [src]="rubikProduct.product.img" alt="">
+    </div>
+    <div class="product-card-info">
+        <span class="product-card-info__stock">Stock: {{rubikProduct.product.stock}}</span>
+        <span class="product-card-info__price">{{rubikProduct.product.price | currency:'CLP':'$':'1.0'}} </span>
+    </div>
+    <div class="product-card-buttons">
+        <button class="c-button" (click)="cart.addRubikProduct(rubikProduct)">Agregar al carrito</button>
+    </div>
+</article>

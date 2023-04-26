@@ -1,0 +1,14 @@
+<section class="products-page" *ngIf="rubik.rubikProducts$ | async as rubikProducts">
+    <header>
+        <h3>Cubos Rubik</h3>
+        <button mat-fab extended class="shopping-cart-button" routerLink="/shopping-cart">
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </header>
+    <section class="rubik-products-wraper">
+            <app-rubik-product-view 
+                *ngFor="let rubikProduct of rubikProducts"
+                [rubikProduct]="rubikProduct">
+            </app-rubik-product-view>
+    </section>
+</section>

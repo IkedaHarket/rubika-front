@@ -1,0 +1,8 @@
+<div class="layout" >
+    <section class="curtain" [class.open]="isCurtainOpen">
+        <app-curtain></app-curtain>
+    </section>
+    <div *ngIf="!isCurtainOpen && routerContentIsDone" [@enterAnimation] class="page-route">
+        <router-outlet></router-outlet>
+    </div>
+</div>

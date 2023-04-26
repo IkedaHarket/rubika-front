@@ -1,0 +1,80 @@
+.product-cart-shopping{
+    box-shadow: 0px 0px 2px #14a99f;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    gap: 40px;
+    &:hover{
+        box-shadow: 0px 0px 5px #14a99f;
+    }
+    .product-cart-img-wrapper{
+        min-width: 100px;
+        min-height: 100px;
+        width: 150px;
+        height: 150px;
+        margin: 10px 20px 10px 20px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .product-cart-shopping-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding-bottom: 10px;
+        h6{
+            font-size: 2.5rem;
+        }
+        span{
+            font-size: 1.6rem;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        .add-button, .remove-button{
+            background-color: #14a99f;
+            color: aliceblue;
+            &:hover{
+                box-shadow: 0px 0px 5px #14a99f;
+            }
+            transition: .3s ease-in-out box-shadow;
+            -webkit-transition: .3s ease-in-out box-shadow;
+            -moz-transition: .3s ease-in-out box-shadow;
+            -ms-transition: .3s ease-in-out box-shadow;
+            -o-transition: .3s ease-in-out box-shadow;
+            transform: scale(.7);
+            -webkit-transform: scale(.7);
+            -moz-transform: scale(.7);
+            -ms-transform: scale(.7);
+            -o-transform: scale(.7);
+        }
+    }
+    
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: .3s ease-in-out box-shadow;
+    -moz-transition: .3s ease-in-out box-shadow;
+    -ms-transition: .3s ease-in-out box-shadow;
+    -o-transition: .3s ease-in-out box-shadow;
+    transition: .3s ease-in-out box-shadow;
+}
+@media screen and (max-width:870px) {
+    .product-cart-shopping{
+        flex-direction: column;
+        height: auto;
+        max-width: 300px;
+        margin: auto;
+        gap: 20px;
+        .buttons{
+            flex-direction: row-reverse;
+        }
+    }
+}

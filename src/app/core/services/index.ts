@@ -1,0 +1,1 @@
+export { RubikService } from './rubik.service';

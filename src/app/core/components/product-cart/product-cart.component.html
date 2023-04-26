@@ -1,0 +1,19 @@
+<div class="product-cart-shopping">
+    <div class="product-cart-img-wrapper">
+        <img [src]="product.rubikProduct.product.img" alt="">
+    </div>
+    <div class="product-cart-shopping-content">
+        <h6>{{product.rubikProduct.product.name}}</h6>
+        <span class="precio">Precio: {{product.rubikProduct.product.price | currency:'CLP':'$':'1.0'}}</span>
+        <span class="cantidad">Cantidad: {{product.units}}</span>
+        <span class="total">Total: {{total() | currency:'CLP':'$':'1.0'}}</span>
+    </div>
+    <div class="buttons">
+        <button mat-fab extended class="add-button" (click)="cart.addRubikProduct(product.rubikProduct)">
+            <mat-icon>add</mat-icon>
+        </button>
+        <button mat-fab extended class="remove-button" (click)="cart.removeRubikProduct(product.rubikProduct)">
+            <mat-icon>remove</mat-icon>
+        </button>
+    </div>
+</div>

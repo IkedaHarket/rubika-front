@@ -1,0 +1,27 @@
+<section class="shopping-cart-page">
+    <header>
+        <h3>Carrito</h3>
+        <button mat-fab extended class="back-button" routerLink="rubiks">
+            <mat-icon>reply</mat-icon>
+        </button>
+    </header>
+    <section class="shopping-content" *ngIf="cart.shoppingCart$ | async as shoppingCart" >
+        <app-product-cart 
+            *ngFor="let product of shoppingCart.products"
+            [product]="product"
+        ></app-product-cart>
+        <div *ngIf="cart.calcFullPurchase() | async as total" class="shopping-cart-page-total">
+            <span>
+                Total: {{total | currency:'CLP':'$':'1.0'}}
+            </span>
+           
+        </div>
+        <button class="c-button" *ngIf="shoppingCart.products.length > 0">
+            Comprar
+        </button>
+        <span *ngIf="shoppingCart.products.length <= 0" class="no-products">Aún no tienes cubos agregados :c</span>
+    </section>
+
+   
+</section>
+

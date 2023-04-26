@@ -1,0 +1,38 @@
+.products-page{
+    max-width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 20px 20px 20px 0;
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px;
+        h3{
+            font-size: 4rem;
+        }
+        .shopping-cart-button{
+            background-color: #14a99f;
+            color: aliceblue;
+            &:hover{
+                box-shadow: 0px 0px 5px #14a99f;
+            }
+            transition: .3s ease-in-out box-shadow;
+            -webkit-transition: .3s ease-in-out box-shadow;
+            -moz-transition: .3s ease-in-out box-shadow;
+            -ms-transition: .3s ease-in-out box-shadow;
+            -o-transition: .3s ease-in-out box-shadow;
+        }
+    }
+    .rubik-products-wraper{
+        width: 100%;
+        max-height: calc(100vh - 120px);
+        padding: 10px 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+}

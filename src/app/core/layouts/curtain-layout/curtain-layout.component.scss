@@ -1,0 +1,29 @@
+.layout{
+    display: flex;
+}
+
+.curtain{
+    width: 30%;
+    height: 100vh;
+    margin-right: 10vw;
+    &.open{
+        width: 85%;
+    }
+    transition: .5s ease-in-out width;
+    -webkit-transition: .5s ease-in-out width;
+    -moz-transition: .5s ease-in-out width;
+    -ms-transition: .5s ease-in-out width;
+    -o-transition: .5s ease-in-out width;
+}
+.page-route{
+    width: 70%;
+    overflow-x: hidden;
+}
+@media screen and (max-width:800px) {
+    .curtain{ 
+        display: none;
+    }
+    .page-route{
+        width: 100%;
+    }
+}
